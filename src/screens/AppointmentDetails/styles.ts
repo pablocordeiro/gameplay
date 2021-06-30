@@ -1,28 +1,40 @@
 import { StyleSheet } from "react-native";
+import { getBottomSpace } from "react-native-iphone-x-helper";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center'
+    flex: 1,
+
   },
-  user: {
-    flexDirection: 'row'
+  banner: {
+    width: '100%',
+    height: 234,
+    marginBottom: 30
   },
-  greeting: {
-    fontFamily: theme.fonts.title500,
-    fontSize: 24,
-    color: theme.colors.heading,
-    marginRight: 6    
+  bannerContent: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    paddingHorizontal: 24,
+    marginBottom: 30
   },
-  username: {
+  title: {
+    fontSize: 28,
     fontFamily: theme.fonts.title700,
-    fontSize: 24,
     color: theme.colors.heading
   },
-  message: {
+  subtitle: {
+    fontSize: 13,
     fontFamily: theme.fonts.text400,
-    color: theme.colors.highlight 
+    color: theme.colors.heading
+  },
+  members: {
+    marginLeft: 24,
+    marginTop: 27
+  }, 
+  footer: {
+    paddingHorizontal: 24,
+    paddingVertical: 20,
+    marginBottom: getBottomSpace()
   }
-
 });
